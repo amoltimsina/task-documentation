@@ -15,7 +15,7 @@
   - `sudo nano /etc/ssh/sshd_config`
   - Change the default 22 port to `3222`
 
-        ![alt text](/Images/port.png)
+      ![alt text](/Images/port.png)
         *Image: SSH Configuration*
 - After the creation of an SSH Key, it is necessary for the public key to be present in the machine you are trying to access in order to login password-free. In our situation, the public key from Starting Machine should be added to Machine1.
 
@@ -23,9 +23,9 @@
   - If this does not work, it is also possible to manually copy your public key and paste it in `~/.ssh` in a file named `authorized_keys` which can be created using `nano authorized_keys`. Make sure the permissions to `authorized_keys` is `600` and the users and groups is `User1` itself.
           ![alt text](/Images/authkey.png) *Image: Creation of authorized_files*
 
-        Note: All of this should be done on `Machine1`
+    Note: All of this should be done on `Machine1`
 
 - Now, the `Starting Machine` can try accessing `Machine1` as follows:
   - `ssh -p 3222 user1@<ip_of_machine1>`
 
-    These steps should grant you access to Machine1 from the Starting Machine. Remember, this process is just for the connection of the first two machines.
+These steps should grant you access to Machine1 from the Starting Machine. Remember, this process is just for the connection of the first two machines.
